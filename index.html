@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cv numérique d'Angèl Zheng</title>
+    <title>Angèl Zheng</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="components.css">
@@ -26,6 +26,9 @@
 
         <section id="accueil" class="hero-section">
             <div class="hero-content animate-fade-in transition duration-700">
+                <div class="hero-photo-container">
+                    <img src="rick-astley-900x506.jpg" alt="Angèl Zheng" class="hero-photo">
+                </div>
                 <h1 class="hero-title">Angèl Zheng</h1>
                 <p class="hero-subtitle">Étudiant en informatique</p>
             </div>
@@ -35,7 +38,7 @@
             <h2 class="section-title"> À Propos de Moi</h2>
             <div class="section-content animate-slide-in-left">
                 <p class="text-content">
-                    Texte
+                    Je suis en deuxième année de BUT Informatique à l’IUT de Lille, je suis actuellement en recherche d’un stage de 10 semaines en avril 2026, dans le domaine de l’administration réseaux et système en adéquation à ma futur orientation, ou du développement d’application réaliser dans divers projets universitaires. Les différents projets impliquant l’installation de système d’exploitation, de développement d’applications (en Java) intégrant une partie graphique(en Javafx) et de pages Web. Ces expériences m’ont permis développer une meilleure approche de la programmation, l’utilisation d’outils tel que git, une meilleure communication d’équipe et une recherche de documentation accrue.
                 </p>
                 <div class="skills-grid">
                     <span class="skill-pill">Java</span>
@@ -54,9 +57,22 @@
                 <div id="projects-container" class="projects-container">
                     
                     <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">PlaceHolder : titre</h3>
-                        <p class="project-description">PlaceHolder : description</p>
-                        <a href="#" class="project-link"> PlaceHolder : lien &rarr;</a>
+                        <h3 class="project-title">Modu-Lab</h3>
+                        <p class="project-description">Modu-Lab est un jeu de casse-tête, le but est de trouver la sortie de Labyrinthe. Le jeu est développer en équipe de cinq personnes, développé en java il possède une partie graphique en JavaFx exploitant des fichiers fxml, il respecte le modèle MVC et respecte au mieu les principes SOLID.  </p>
+                        <a href="https://github.com/agl-zheng/Labyrinthe-java/" class="project-link"> Lien vers mon Projet &rarr;</a>
+                    </div>
+
+                    <div class="project-card animate-slide-in-left">
+                        <h3 class="project-title">Medieval Horizon </h3>
+                        <p class="project-description">Medieval Horizon est un jeu de gestion de village, il a été developpé lors d'un projet de deuxième année de BUT infromatique. Par équipe de cinq personnes, nous avons développé ce jeu sur une semaine et en appliquant la méthodologie agile.</p>
+                        <a href="https://github.com/agl-zheng/medieval-horizon/" class="project-link"> Lien vers mon Projet &rarr;</a>
+                    </div>
+
+                    <div class="project-card animate-slide-in-left">
+                        <h3 class="project-title">Logiciel d'échange</h3>
+                        <p class="project-description">Cette application à été développé dans le cadre du parcours de BUT informatique, le but étant des gérrer des élèves en échange international. </p>
+                        <p class="project-description">Le projet est développer en java et nous introduit au développement d'une partie ihm en JavaFx, nous y avons implementer des algorithmes de pairages d'élèves ainsi que les controlleurs gérrant toute la prtie graphique. </p>
+                        <a href="https://github.com/agl-zheng/Echange-Int/" class="project-link"> Lien vers mon Projet &rarr;</a>
                     </div>
 
                     <div class="project-card animate-slide-in-left">
@@ -66,21 +82,10 @@
                     </div>
 
                     <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">PlaceHolder : titre</h3>
-                        <p class="project-description">PlaceHolder : description</p>
-                        <a href="#" class="project-link"> PlaceHolder : lien &rarr;</a>
-                    </div>
-
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">PlaceHolder : titre</h3>
-                        <p class="project-description">PlaceHolder : description</p>
-                        <a href="#" class="project-link"> PlaceHolder : lien &rarr;</a>
-                    </div>
-
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">PlaceHolder : titre</h3>
-                        <p class="project-description">PlaceHolder : description</p>
-                        <a href="#" class="project-link"> PlaceHolder : lien &rarr;</a>
+                        <h3 class="project-title">La Course Aux Points</h3>
+                        <p class="project-description">La Course Aux Points est un jeu ludo-éducatif développé en ijava. Ijava étant une version simplifié de java conçu pour introduire au dévéloppement lors du cursus du BUT informatique.</p>
+                        <p class="project-description">Le jeu est un jeu de plateau à la mario-Party, les mini-jeux étant remplacés par des questions de culture générales</p>
+                        <a href="https://github.com/agl-zheng/S1.02" class="project-link"> Lien vers mon Projet &rarr;</a>
                     </div>
                 </div>
 
@@ -98,7 +103,7 @@
 
     <footer id="contact" class="footer section-hidden">
         <div class="footer-content">
-            <h2 class="footer-title">Entrons en Contact</h2>
+            <h2 class="footer-title">Entrons en Contact !</h2>
             <p class="footer-text">Je suis ouvert aux nouvelles oportunitées. N'hésiter pas à me contacter.</p>
             
             <div class="social-links">
@@ -115,7 +120,10 @@
                 </a>
 
                 <a href="http://agl-zheng.github.io/angel_Zheng.pdf" class="social-link">
-                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7 22h10a2 2 0 0 0 2-2V9l-5-5H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2zm8-14V4l4 4h-4zm3 9H9a1 1 0 0 1 0-2h9a1 1 0 0 1 0 2zm0-4H9a1 1 0 0 1 0-2h9a1 1 0 0 1 0 2zm0-4H9a1 1 0 0 1 0-2h9a1 1 0 0 1 0 2z"/></svg></a>
+                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                        <path d="M8 14h8v1H8v-1zm0-2h8v1H8v-1zm0-2h5v1H8v-1z"/>
+                    </svg>
                 </div>
 
             <p class="footer-copyright">  </p>
