@@ -102,6 +102,8 @@
     margin-bottom: 1.25rem;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .project-tag {

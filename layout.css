@@ -139,6 +139,8 @@
     line-height: 1.75;
     margin-bottom: 1rem;
     color: var(--color-gray-300);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .skills-grid {
