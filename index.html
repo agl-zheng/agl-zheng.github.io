@@ -1,132 +1,186 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angèl Zheng</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="animations.css">
+    <title>Angèl Zheng - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-gray-800">
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">AZ</div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <header id="main-header" class="header"> <nav class="nav-container"> <div class="nav-content"> <div class="logo">
-                    <a href="#accueil">Angèl Zheng</a>
-                </div>
-                <div class="nav-links"> <a href="#about" class="nav-link">À Propos</a>
-                    <a href="#projets" class="nav-link">Projets</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main-container">
-
-        <section id="accueil" class="hero-section">
-            <div class="hero-content animate-fade-in transition duration-700">
-                <div class="hero-photo-container">
-                    <img src="angel_zheng.jpg" alt="Angèl Zheng" class="hero-photo">
-                </div>
-                <h1 class="hero-title">Angèl Zheng</h1>
-                <p class="hero-subtitle">Étudiant en informatique</p>
-            </div>
-        </section>
-
-        <section id="about" class="content-section section-hidden">
-            <h2 class="section-title"> À Propos de Moi</h2>
-            <div class="section-content animate-slide-in-left">
-                <p class="text-content">
-                    Je suis en deuxième année de BUT Informatique à l’IUT de Lille et je suis actuellement à la recherche d’un stage de 10 semaines à partir d’avril 2026, dans le domaine de l’administration réseaux et systèmes — en adéquation avec mon orientation future — ou dans le développement d’applications.
-Au cours de divers projets universitaires, j’ai participé à l’installation de systèmes d’exploitation, au développement d’applications en Java intégrant une interface graphique avec JavaFX, ainsi qu’à la création de pages web. Ces expériences m’ont permis de développer une approche plus rigoureuse de la programmation, de maîtriser des outils tels que Git, d’améliorer ma communication au sein d’une équipe et d’accroître ma capacité à rechercher et exploiter de la documentation technique.
-                </p>
-                <div class="skills-grid">
-                    <span class="skill-pill">Java</span>
-                    <span class="skill-pill">SQL</span>
-                    <span class="skill-pill">Python</span>
-                    <span class="skill-pill">HTML</span>
-                    <span class="skill-pill">CSS</span>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1><span class="highlight">Angèl Zheng</span></h1>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets →</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-image">
+                <img src="angel_zheng.jpg" alt="Angèl Zheng">
+            </div>
+        </div>
+    </section>
 
-        <section id="projets" class="content-section section-hidden">
-            <h2 class="section-title">Projets Réalisés</h2>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Qui suis-je ?</h2>
+            <p class="section-subtitle">Développeur en formation • BUT Informatique</p>
+            
+                <div class="about-card">
+                    <h3>Mon Parcours</h3>
+                    <p>Actuellement en deuxième année de BUT Informatique à l'IUT de Lille, je suis à la recherche d'un stage de 10 semaines à partir d'avril 2026 dans le domaine de l'administration réseaux et systèmes ou le développement d'applications.</p>
+                    <p>Mes expériences universitaires m'ont permis de développer une approche rigoureuse de la programmation et de maîtriser des outils collaboratifs comme Git.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3>Mes Compétences</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            
+                            <span class="skill-name">JavaFX</span>
+                        </div>
+                        <div class="skill-item">
+                            
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
 
-            <div class="carousel-wrapper">
-                <div id="projects-container" class="projects-container">
-                    
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">Modu-Lab</h3>
-                        <p class="project-description" class="text-content">Modu-Lab est un jeu de casse-tête dont le but est de trouver la sortie d’un labyrinthe. Le jeu a été développé en <strong>équipe</strong> de cinq personnes. </p>
-                        <p class="project-description" class="text-content">Développé en <strong>Java</strong>, il possède une interface graphique en <strong>JavaFX</strong> exploitant des fichiers FXML, respecte le modèle <strong>MVC</strong> et applique au mieux les principes <strong>SOLID</strong>.</p>
-                        <a href="https://github.com/agl-zheng/Labyrinthe-java/" class="project-link"> Lien vers mon Projet &rarr;</a>
+                            <span class="skill-name">HTML/CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            
+                            <span class="skill-name">Git</span>
+                        </div>
                     </div>
+                </div>
+            
+        </div>
+    </section>
 
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">Medieval Horizon </h3>
-                        <p class="project-description">Medieval Horizon est un jeu de gestion de village, il a été developpé lors d'un projet de deuxième année de BUT infromatique. </p>
-                        <p class="project-description">Par <strong>équipe</strong> de cinq personnes, nous avons développé ce jeu sur une semaine et en appliquant la <strong>méthodologie agile</strong>.</p>
-                        <a href="https://github.com/agl-zheng/medieval-horizon/" class="project-link"> Lien vers mon Projet &rarr;</a>
+    <section id="projets" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="section-subtitle">Découvrez mes réalisations académiques et personnelles</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="path/to/modu-lab.jpg" alt="Modu-Lab">
                     </div>
-
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">Logiciel d'échange</h3>
-                        <p class="project-description">Cette application a été développée en <strong>équipe</strong> dans le cadre du BUT Informatique, le but étant de gérer des élèves en échange international. </p>
-                        <p class="project-description">Le projet est développé en <strong>Java</strong> et nous introduit au développement d’une interface graphique en <strong><JavaFX/strong>. Nous y avons implémenté des algorithmes de pairage d’élèves ainsi que les contrôleurs gérant toute la partie graphique. </p>
-                        <a href="https://github.com/agl-zheng/Echange-Int/" class="project-link"> Lien vers mon Projet &rarr;</a>
-                    </div>
-
-                    <div class="project-card animate-slide-in-left">
-                        <h3 class="project-title">La Course Aux Points</h3>
-                        <p class="project-description">La Course Aux Points est un jeu ludo-éducatif développé en <strong>iJava</strong>, une version simplifiée de Java conçue pour l’introduction au développement durant le BUT Informatique. </p>
-                        <p class="project-description">Le jeu est un jeu de plateau similaire à Mario Party, où les mini-jeux sont remplacés par des questions de culture générale.</p>
-                        <a href="https://github.com/agl-zheng/S1.02" class="project-link"> Lien vers mon Projet &rarr;</a> 
+                    <div class="project-body">
+                        <h3>Modu-Lab</h3>
+                        <p>Jeu de casse-tête de labyrinthe développé en équipe de cinq personnes. Développé en Java avec JavaFX, respecte le modèle MVC et applique les principes SOLID.</p>
+                        <a href="https://github.com/agl-zheng/Labyrinthe-java/" class="project-link" target="_blank">Voir le projet →</a>
                     </div>
                 </div>
 
-                <button id="scroll-left" class="carousel-btn carousel-btn-left">
-                    <svg class="carousel-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-                <button id="scroll-right" class="carousel-btn carousel-btn-right">
-                    <svg class="carousel-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="path/to/medieval-horizon.jpg" alt="Medieval Horizon">
+                    </div>
+                    <div class="project-body">
+                        <h3>Medieval Horizon</h3>
+                        <p>Jeu de gestion de village développé en équipe durant une semaine en appliquant la méthodologie agile. Projet de deuxième année de BUT informatique.</p>
+                        <a href="https://github.com/agl-zheng/medieval-horizon/" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                        <img src="path/to/echange.jpg" alt="Logiciel d'Échange">
+                    </div>
+                    <div class="project-body">
+                        <h3>Logiciel d'Échange</h3>
+                        <p>Application de gestion d'élèves en échange international. Développée en Java avec JavaFX, implémente des algorithmes de pairage d'élèves.</p>
+                        <a href="https://github.com/agl-zheng/Echange-Int/" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                        <img src="path/to/course-aux-points.jpg" alt="La Course Aux Points">
+                    </div>
+                    <div class="project-body">
+                        <h3>La Course Aux Points</h3>
+                        <p>Jeu ludo-éducatif développé en iJava. Jeu de plateau inspiré de Mario Party avec des questions de culture générale à la place des mini-jeux.</p>
+                        <a href="https://github.com/agl-zheng/S1.02" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <footer id="contact" class="footer section-hidden">
-        <div class="footer-content">
-            <h2 class="footer-title">Entrons en Contact !</h2>
-            <p class="footer-text">Je suis ouvert aux nouvelles opportunités. N’hésitez pas à me contacter.</p>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Entrons en Contact !</h2>
+            <p>Je suis ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.</p>
             
             <div class="social-links">
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link">
-                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.57-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <a href="https://linkedin.com/in/" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.57-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-                
-                <a href="https://github.com/agl-zheng" target="_blank" rel="noopener noreferrer" class="social-link">
-                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.692.084-.692 1.205.086 1.838 1.233 1.838 1.233 1.07 1.836 2.809 1.305 3.492.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.792 24 17.303 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                <a href="https://github.com/agl-zheng" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.692.084-.692 1.205.086 1.838 1.233 1.838 1.233 1.07 1.836 2.809 1.305 3.492.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.792 24 17.303 24 12c0-6.627-5.373-12-12-12z"/></svg>
                 </a>
-
                 <a href="mailto:zheng.angel@proton.me" class="social-link">
-                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
                 </a>
-
                 <a href="http://agl-zheng.github.io/angel_Zheng.pdf" class="social-link">
-                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
-                        <path d="M8 14h8v1H8v-1zm0-2h8v1H8v-1zm0-2h5v1H8v-1z"/>
-                    </svg>
-                </div>
-
-            <p class="footer-copyright">  </p>
+                    <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/><path d="M8 14h8v1H8v-1zm0-2h8v1H8v-1zm0-2h5v1H8v-1z"/></svg>
+                </a>
+            </div>
+            
+            <p style="margin-top: 3rem; opacity: 0.7; font-size: 0.9rem;">© 2024 Angèl Zheng. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
