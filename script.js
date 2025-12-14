@@ -1,84 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const projectsContainer = document.getElementById('projects-container');
-    const scrollLeftBtn = document.getElementById('scroll-left');
-    const scrollRightBtn = document.getElementById('scroll-right');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const header = document.getElementById('main-header');
-    const sectionsToAnimate = document.querySelectorAll('.section-hidden');
-
-    const scrollAmount = 350;
-    const headerHeight = header.offsetHeight;
-    let lastScrollTop = 0;
-
-
-    window.addEventListener('scroll', () => {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScroll > lastScrollTop && currentScroll > headerHeight) { 
-            header.style.transform = 'translateY(-100%)';
-        } 
-        else {
-            header.style.transform = 'translateY(0)';
+    // Gestion de l'effet de défilement de la barre de navigation
+    const navbar = document.getElementById('navbar');
+    const scrollHandler = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
-        
-        lastScrollTop = Math.max(0, currentScroll);
-    });
-
-    /**
-     * Fait défiler le conteneur des projets dans une direction
-     * @param {number} direction - 1 pour droite, -1 pour gauche
-     */
-    const scrollProjects = (direction) => {
-        const newScrollLeft = projectsContainer.scrollLeft + (direction * scrollAmount);
-        
-        projectsContainer.scroll({
-            left: newScrollLeft,
-            behavior: 'smooth'
-        });
     };
-
-    if (scrollLeftBtn && projectsContainer) {
-        scrollLeftBtn.addEventListener('click', () => scrollProjects(-1));
-    }
-
-    if (scrollRightBtn && projectsContainer) {
-        scrollRightBtn.addEventListener('click', () => scrollProjects(1));
-    }
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            const targetId = link.getAttribute('href'); 
-            const targetSection = document.querySelector(targetId);
+    // Écoute l'événement de défilement
+    window.addEventListener('scroll', scrollHandler);
+
+    // Initialise la classe au chargement si l'utilisateur n'est pas en haut
+    scrollHandler();
+
+    // Gestion du défilement fluide pour les liens de navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 64; 
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            const navbarHeight = 64; // Hauteur de la barre de navigation pour l'offset
+
+            if (target) {
+                // Calcule la position de défilement en soustrayant la hauteur de la barre de navigation
+                const targetPosition = target.offsetTop - navbarHeight;
                 
                 window.scrollTo({
-                    top: offsetTop,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Si la cible est l'accueil, on s'assure d'aller en haut (0)
+                if (targetId === '#accueil') {
+                     window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
-    });
-
-    const observerOptions = {
-        root: null, 
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
-                entry.target.classList.remove('section-hidden');
-                observer.unobserve(entry.target); 
-            }
-        });
-    }, observerOptions);
-
-    sectionsToAnimate.forEach(section => {
-        sectionObserver.observe(section);
     });
 });
